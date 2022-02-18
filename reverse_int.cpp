@@ -1,3 +1,5 @@
+// g++ -std=c++11 reverse_int.cpp
+
 #include <iostream>
 #include <vector>
 using namespace std;

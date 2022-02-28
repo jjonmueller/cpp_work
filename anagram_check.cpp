@@ -7,9 +7,8 @@ using namespace std;
 
 int main() {
   string a = "rail safety";
-  string b = "fairy taless";
+  string b = "fairy tales";
   unordered_map<char, int> m;
-  unordered_map<char, int>::iterator it;
   
   // Base case if the two string are not equal in legnth
   if (a.length() != b.length()) {
@@ -17,14 +16,14 @@ int main() {
     return -1;
   }
 
-  // hash map the first string
+
   for (auto c: a) {
-    m[c]++;
+    m[tolower(c)]++;
   }
 
   // See if all the other characters are in the map exactly once
   for (auto c: b) {
-    if (m.find(c) == m.end()) {
+    if (m.find(tolower(c)) == m.end()) {
       cout << "Not an anagram" << endl;
       return -1;
     }
@@ -34,3 +33,4 @@ int main() {
  
   return 0;
 }
+
